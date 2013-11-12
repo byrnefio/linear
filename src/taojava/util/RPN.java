@@ -23,8 +23,9 @@ public class RPN {
 	    try {
 		BufferedReader reader = new BufferedReader(
 			new InputStreamReader(System.in));
-
+		// Split by whitespace
 		String[] in = reader.readLine().split("\\s+");
+		// Evaluate all the characters on the line 
 		for (int i = 0; i < in.length; i++) {
 		    terminate = eval(in[i]);
 
@@ -34,11 +35,19 @@ public class RPN {
 	    }
 	}
     }
-
-    private static boolean eval(String input) throws Exception {
+    /**
+     * 
+     * @param input
+     * 		an input string representing a single operator or double
+     * @return 
+     * 		a boolean indicating whether the calculations are done
+     * @throws Exception
+     */
+    public static boolean eval(String input) throws Exception {
 	double first = 0;
 	double second = 0;
 	LinkedStackIterator<Double> it = new LinkedStackIterator<Double>(vals);
+	
 	if (input.equals("q")) {
 	    return true;
 	} else if (input.equals("p")) {
