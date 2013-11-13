@@ -23,7 +23,7 @@ public class RPN {
     public static void main(String[] args) throws Exception {
 	vals = new LinkedStack<Double>();
 	PrintWriter pen = new PrintWriter(System.out, true);
-
+	pen.println("RPN calculator now running.");
 	while (!terminate) {
 	    try {
 		// Take input
