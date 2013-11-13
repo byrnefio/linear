@@ -15,15 +15,14 @@ public class RPN {
     /**
      * A stack of operands
      */
-    static LinkedStack<Double> vals;
+    static LinkedStack<Double> vals = new LinkedStack<Double>();
 
     /**
      * @param args
      */
     public static void main(String[] args) throws Exception {
-	vals = new LinkedStack<Double>();
 	PrintWriter pen = new PrintWriter(System.out, true);
-	pen.println("RPN calculator now running.");
+
 	while (!terminate) {
 	    try {
 		// Take input
