@@ -34,7 +34,8 @@ public class RPN {
      */
     public static void main(String[] args) throws Exception {
 	PrintWriter pen = new PrintWriter(System.out, true);
-
+	pen.println("RPN calculator now running");
+	
 	while (!terminate) { // Until the user inputs "q"
 	    try {
 		// Take input
@@ -149,9 +150,9 @@ public class RPN {
 	    if (input.equals("+")) {
 		vals.push(first + second);
 	    } else if (input.equals("-")) {
-		vals.push(first - second);
+		vals.push(second - first);
 	    } else if (input.equals("/")) {
-		vals.push(first / second);
+		vals.push(second / first);
 	    } else if (input.equals("max")) {
 		vals.push(Math.max(first, second));
 	    } else if (input.equals("min")) {
